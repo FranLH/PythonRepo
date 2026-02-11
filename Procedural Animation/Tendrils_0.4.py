@@ -2,7 +2,7 @@ import pygame
 import math
 import copy
 import sys
-sys.path.append("/Users/Francisco/Desktop/Coding/Python/MyClasses")
+sys.path.append("/Users/Francisco/Desktop/Coding/PythonRepo/MyClasses")
 from camera import Camera
 from win_display import Window
 # from typing import Self

@@ -6,6 +6,7 @@ Width, Height = 600, 600
 window = pygame.display.set_mode((Width, Height), pygame.DOUBLEBUF, 32)
 window.fill((255,255,255))
 pygame.init()
+
 class LinearFunc:
     def __init__(self,pointA,pointB,perpendicular):
         if pointA[0]==pointB[0]:

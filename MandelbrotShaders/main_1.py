@@ -18,11 +18,11 @@ import copy
 # Fire palette: [[0,0,0],[1,0,0],[1,1,0],[1,1,1],[1,1,0],[1,0,0]]
 # Chocolate and cream palette : [[0,0,0],[0.74,0.53,0.36],[1,1,0.93],[0.74,0.53,0.36]]
 # Coral palette: [[0,0,0.7],[0.8,0,0.5],[1,0,1]]      # Inside: [0.9,0.8,0.3]
-outsideColorPalette = [[0,0,0],[1,0,0],[1,1,0],[1,1,1],[1,1,0],[1,0,0]]
-insideColor = [0,0,0]
-blurStrength = 0.1
+outsideColorPalette = [[0,0,0.7],[0.8,0,0.5],[1,0,1]]
+insideColor = [0.9,0.8,0.3]
+blurStrength = -1000
     
-
+0.234723842984
 
 def ExpandColorPalette(palette, repetitions):
     finalList = copy.deepcopy(palette)

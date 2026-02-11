@@ -24,7 +24,6 @@ class App(mglw.WindowConfig):
         [0,0,0],
         [0,0.4,0.7],
         [1,1,0]
-        
         ]
         
         # -----------------------------------------
@@ -43,15 +42,16 @@ class App(mglw.WindowConfig):
         self.baseProg = self.load_program(vertex_shader='vertex_shader.glsl', fragment_shader='fragment_shader.glsl')
         self.baseProg['simResolution'] = self.simulation_size
         self.baseProg['gameTex'] = 0
+        self.baseProg['frame'] = 0
         
         self.postProg = self.load_program(vertex_shader='vertex_shader.glsl', fragment_shader='post_processing.glsl')
         self.postProg['simResolution'] = self.simulation_size
         #self.postProg['resolution'] = self.window_size
         #self.postProg['blurStrength'] = blurStrength
-
+        
         self.postProg['gameTex'] = 0
         self.postProg['cellColors'] = self.colors
-#         
+         
         
 
         
@@ -70,10 +70,11 @@ class App(mglw.WindowConfig):
         "E" : False}
 
         self.moveSpeed=self.BASESPEED
-
+        
 
         self.resize(*self.wnd.buffer_size) # Updates window size at the start
         self.clear_simulation()
+        
             
 
 
@@ -102,7 +103,6 @@ class App(mglw.WindowConfig):
 
 
     def render(self, time, frame_time):
-
         # ======================================================= Input detection
         if self.keyStates["W"]:
             self.camera.pos[1]+=self.moveSpeed
